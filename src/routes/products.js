@@ -1,13 +1,9 @@
 import express from 'express'
+import ProductsController from '../controllers/products';
 
 const router = express.Router()
 
-router.get('/', (req, res) => res.send([{
-    display_name: 'Default product',
-    cover_image: 'hugestring.to.any.image',
-    description: 'Default product description',
-    price: 100
-    }]
-))
+const productsController = new ProductsController()
+router.get('/', (req, res) => productsController.get(req, res))
 
 export default router
