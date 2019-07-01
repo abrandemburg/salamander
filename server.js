@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import app from './src/app'
 
 const port = 3000
